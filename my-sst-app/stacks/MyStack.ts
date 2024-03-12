@@ -20,6 +20,8 @@ export function API({ stack }: StackContext) {
     },
     routes: {
       "GET /": "packages/functions/src/lambda.handler",
+      "GET /works": "packages/functions/src/works.handler",
+      "GET /crashes": "packages/functions/src/crashes.handler",
       "GET /todo": "packages/functions/src/todo.list",
       "POST /todo": "packages/functions/src/todo.create",
     },

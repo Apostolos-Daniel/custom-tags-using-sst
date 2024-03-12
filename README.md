@@ -39,18 +39,28 @@ const registerLambdaHook = () => {
 
 1. Install node modules and run `sst dev`:
 ```bash
+cd my-sst-app
 pnpm install
 pnpm dev
 ```
 2. Hit the endpoint with a `GET` request:
 ```bash
-curl -X GET https://<api-id>.execute-api.<region>.amazonaws.com/
+curl -X GET https://<api-id>.execute-api.<region>.amazonaws.com/crashes
 ```
 3. See the app crashing with the error message:
 ```bash
 Trace: TypeError
 [ERR_INVALID_ARG_TYPE]: The "paths[0]" argument must be of type string. Received undefined
 ```
+4. Hit the endpoint with a `GET` request:
+```bash
+curl -X GET https://<api-id>.execute-api.<region>.amazonaws.com/works
+```
+5. See the app returning a Hello world message like:
+```bash
+Hello world. The time is 2024-03-12T16:26:58.076Z%  
+```
+
 
 
 
